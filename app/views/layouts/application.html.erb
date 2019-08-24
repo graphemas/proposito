@@ -2,11 +2,24 @@
 <html>
   <head>
     <title>Proposito</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+
+    <meta name="description" lang="en" content="">
+    <meta name="description" lang="es" content="">
+
+    <meta name="apple-mobile-web-app-capable" content="yes">
+
+    <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico">
+
     <%= csrf_meta_tags %>
     <%= csp_meta_tag %>
-
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <%= action_cable_meta_tag %>
+    <%= yield :stylesheets %>
+    <link rel="manifest" href="/manifest.json">
   </head>
 
   <body>
