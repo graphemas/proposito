@@ -45,14 +45,18 @@
       <div class="mui--appbar-height"></div>
       <br>
       <br>
-      
+
       <%= yield %>
     </div>
     <footer>
         <div class="mui-appbar">
           <table width="100%">
             <tr style="vertical-align:middle;">
-              <td class="mui--appbar-height mui--text-center"><i class="fa fa-home" aria-hidden="true"></i>1</td>
+              <td class="mui--appbar-height mui--text-center">
+                <%= link_to home_one_path do %>
+                  <i class="fa fa-home" aria-hidden="true"></i>
+                <% end %>
+              </td>
               <td class="mui--appbar-height mui--text-center"><i class="fa fa-home" aria-hidden="true"></i>2</td>
               <td class="mui--appbar-height mui--text-center" align="right"><i class="fa fa-home" aria-hidden="true"></i>3</td>
               <td class="mui--appbar-height mui--text-center" align="right"><i class="fa fa-home" aria-hidden="true"></i>4</td>
