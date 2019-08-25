@@ -22,7 +22,61 @@
     <link rel="manifest" href="/manifest.json">
   </head>
 
-  <body>
-    <%= yield %>
+  <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
+    <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
+      <div class="navbar-brand">
+        Header
+      </div>
+    </nav>
+    <main class="db-main">
+          <p class="bd-notification is-primary">First column</p>
+
+
+      <p class="bd-notification is-primary">First column</p>
+
+          <p class="bd-notification is-primary">First column</p>
+
+      <%= yield %>
+    </main>
+    <footer>
+      <div class="columns is-mobile">
+        <div class="column is-centered">
+          <p class="has-background-white-bis	">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-white-bis	">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-white-bis	">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-white-bis	">
+            <%= link_to root_path, class: "link" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-home"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
