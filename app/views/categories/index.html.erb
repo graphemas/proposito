@@ -17,7 +17,7 @@
               <ul>
                 <% subname['children'].each do |minimalname| %>
                   <li>
-                    <%= link_to products_list_products_path(category_id: minimalname['Id']) do %>
+                    <%= link_to products_path(category_id: minimalname['id']) do %>
                       <%= minimalname['name']%>
                     <% end %>
                   </li>
