@@ -6,6 +6,14 @@
       <%= l.text_field :subject, class: "input" %>
     </diV>
   </div>
+  <div class="field">
+    <%= l.label "Tiendas", class: "label" %>
+    <div class= "control">
+      <div class= "select">
+        <%= l.select :store, Appoitment::STORES , {prompt: "--Seleccionar--"}, {title: "Seleccionar"} %>
+      </div>
+    </diV>
+  </div>
   <div class= "field">
     <%= l.label "Descripción", class: "label" %>
     <div class= "control">
