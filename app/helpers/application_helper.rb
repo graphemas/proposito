@@ -11,7 +11,7 @@ module ApplicationHelper
   def header_menu_right
     default = capture do
       link_to root_path, "aria-label": "Inicio" do
-        image_tag("vink-70x22", height: "22px")
+        image_tag("vink-70x22.png", height: "22px")
       end
     end
 
