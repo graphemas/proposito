@@ -1,6 +1,12 @@
 <h1>Home#index</h1>
 <p>Find me in app/views/home/index.html.erb</p>
 <video id="preview" width="100" height="150"></video>
+
+<div class="map">
+
+</div>
+<div class="preview" width="100" height="100"></div>
+<button type="button" name="button" id="buttonBack" class="btn btn-success">Camara trasera</button>
 <script type="text/javascript">
     var scanner = new Instascan.Scanner({ video: document.getElementById('preview') });
     scanner.addListener('scan', function (content) {
@@ -9,6 +15,11 @@
     Instascan.Camera.getCameras().then(function (cameras) {
       if (cameras.length > 0) {
         scanner.start(cameras[0]);
+        if (cameras.length > 1) {
+          document.getElementById("buttonBack").addEventListener('click', function(){
+            scanner.start(cameras[0])
+          })
+        }
       } else {
         console.error('No cameras found.');
       }
