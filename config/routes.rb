@@ -1,10 +1,6 @@
 Rails.application.routes.draw do
   resources 'categories'
-  resources 'products' do
-    collection do
-      get 'products_list(/c/:category_id)' => :products_list, as: :products_list
-    end
-  end
+  resources 'products'
   get 'home/products'
   get 'home/appointments'
   get 'home/messages'

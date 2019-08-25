@@ -1,5 +1,5 @@
 class ProductsController < ApplicationController
-    def products_list
+    def index
         @products = gt_data("https://challenge.ektdevelopers.com/api/catalog_system/pvt/products/GetProductAndSkuIds?categoryId=#{params['category_id']}&_from=1&_to=10")
         @products_list = []
         @products['data'].each do |product_id|
