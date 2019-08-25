@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>Proposito</title>
+    <title>Vink</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
 
@@ -25,24 +25,34 @@
 
   <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
     <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        Header
+      <div class="columns is-mobile">
+        <div class="column has-text-left">
+          <%= header_menu_left %>
+        </div>
+        <div class="column has-text-centered">
+          <%= header_title %>
+        </div>
+        <div class="column has-text-right">
+          <%= header_menu_right %>
+        </div>
       </div>
     </nav>
     <main class="db-main">
-          <p class="bd-notification is-primary">First column</p>
-
-
-      <p class="bd-notification is-primary">First column</p>
-
-          <p class="bd-notification is-primary">First column</p>
-
       <%= yield %>
     </main>
-    <footer>
-      <div class="columns is-mobile">
+    <footer class="has-background-light">
+      <div class="columns is-gapless is-mobile">
         <div class="column is-centered">
-          <p class="has-background-white-bis	">
+          <p class="has-background-light">
+            <%= link_to root_path, class: "link #{yield :categories_selected}" do %>
+              <span class="icon is-large">
+                <i class="fas fa-3x fa-search"></i>
+              </span>
+            <% end %>
+          </p>
+        </div>
+        <div class="column is-centered">
+          <p class="has-background-light">
             <%= link_to root_path, class: "link" do %>
               <span class="icon is-large">
                 <i class="fas fa-3x fa-home"></i>
@@ -51,7 +61,7 @@
           </p>
         </div>
         <div class="column is-centered">
-          <p class="has-background-white-bis	">
+          <p class="has-background-light">
             <%= link_to root_path, class: "link" do %>
               <span class="icon is-large">
                 <i class="fas fa-3x fa-home"></i>
@@ -60,17 +70,8 @@
           </p>
         </div>
         <div class="column is-centered">
-          <p class="has-background-white-bis	">
-            <%= link_to root_path, class: "link" do %>
-              <span class="icon is-large">
-                <i class="fas fa-3x fa-home"></i>
-              </span>
-            <% end %>
-          </p>
-        </div>
-        <div class="column is-centered">
-          <p class="has-background-white-bis	">
-            <%= link_to root_path, class: "link" do %>
+          <p class="has-background-light">
+            <%= link_to home_messages_path, class: "link" do %>
               <span class="icon is-large">
                 <i class="fas fa-3x fa-home"></i>
               </span>
