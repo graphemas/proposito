@@ -38,22 +38,15 @@
       </div>
     </nav>
     <main class="db-main">
-          <p class="bd-notification is-primary">First column</p>
-
-
-      <p class="bd-notification is-primary">First column</p>
-
-          <p class="bd-notification is-primary">First column</p>
-
       <%= yield %>
     </main>
     <footer class="has-background-light">
       <div class="columns is-gapless is-mobile">
         <div class="column is-centered">
           <p class="has-background-light">
-            <%= link_to root_path, class: "link #{yield :home_selected}" do %>
+            <%= link_to root_path, class: "link #{yield :categories_selected}" do %>
               <span class="icon is-large">
-                <i class="fas fa-3x fa-home"></i>
+                <i class="fas fa-3x fa-search"></i>
               </span>
             <% end %>
           </p>
