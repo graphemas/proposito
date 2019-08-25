@@ -89,5 +89,8 @@
         </div>
       </div>
     </footer>
+    <script>
+      window.vapidPublicKey = new Uint8Array(<%= @decodedVapidPublicKey %>);
+    </script>
   </body>
 </html>
