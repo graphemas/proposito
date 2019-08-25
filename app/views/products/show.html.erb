@@ -1,16 +1,26 @@
-<h1>Detalle de producto</h1>
-<%= image_tag("192x192.png") %>
-<br>
-<%= link_to "Agendar cita", new_appoitment_path, class: "button is-danger"%>
-<%= link_to "Lo quiero", "#", class: "button is-danger"%>
-<br>
-<% @product.each do |detail|  %>
-  <% detail.reverse_each do |key, value| %>
-      <% if value.is_a?(String) && value != '' %>
-        <%= value %>
-      <% else %>
-        <%= value[0] %>
+<div class="content-general">
+  <div class="content-card">
+    <div class="content-image">
+      <%= image_tag("192x192.png", class:"image-show-product")%>
+    </div>
+    <div class="content-body">
+      <%= link_to "Agendar cita", new_appoitment_path, class: "button is-danger"%>
+      <%= link_to "Lo quiero", "#", class: "button is-danger"%>
+      <br>
+      <% @product.each do |detail|  %>
+        <% detail.reverse_each do |key, value| %>
+            <% if value.is_a?(String) && value != '' %>
+              <label class="title-th">
+                <%= value %>:
+              </label>
+            <% else %>
+              <% if !value.is_a?(Integer)%>
+                <i class="description-atributte"><%= value[0] %></i>
+              <%end%>
+            <% end %>
+        <% end %>
+        <br>
       <% end %>
-    <br>
-  <% end %>
-<% end %>
+    </div>
+  </div>
+</div>

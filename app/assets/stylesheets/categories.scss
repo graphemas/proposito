@@ -4,5 +4,31 @@
 .menu-label{
   font-weight: bold;
   font-size: 18px;
-  color: red;
+  color: #E1251B;
+}
+.space-padding{
+  padding: 10px 10px 0px 10px;
+}
+.content-image{
+  padding: 10px 10px 0px 10px;
+  height: 200px;
+  border-bottom:1px solid rgb(209, 209, 209);
+}
+.image-show-product{
+  width: 90%;
+  height: 100%;
+}
+.content-general{
+  padding: 10px 5% 0px 5%;
+}
+.content-card{
+  border-radius: 10px;
+  border: 1px solid rgb(209, 209, 209);
+}
+.title-th{
+  font-weight: bold;
+}
+.content-body{
+  padding: 10px;
+  background-color: #FFDC20;
 }

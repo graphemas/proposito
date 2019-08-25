@@ -1,9 +1,23 @@
-<h1>Productos</h1>
 <% @products_list.each do |product| %>
   <%= link_to product_path(product['Id']) do %>
-    <p>
-      <%= image_tag("192x192.png") %>
-      <%= product['Name'] %>
-    </p>
+    <div class="space-padding">
+      <div class="box">
+        <article class="media">
+          <div class="media-left">
+            <figure class="image is-64x64">
+              <img src="https://bulma.io/images/placeholders/128x128.png" alt="Image">
+            </figure>
+          </div>
+          <div class="media-content">
+            <div class="content">
+              <p>
+                <strong><%= product['Name'] %></strong>
+                <br>
+              </p>
+            </div>
+          </div>
+        </article>
+      </div>
+    </div>
   <% end %>
 <% end %>
