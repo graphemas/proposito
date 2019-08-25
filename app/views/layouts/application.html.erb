@@ -89,21 +89,5 @@
         </div>
       </div>
     </footer>
-    <script type="text/javascript">
-        function stopCamera(){
-          Instascan.Camera.getCameras().then(function (cameras) {
-            if (cameras.length > 0) {
-              if(scanner){
-                scanner.stop(cameras[1])
-              }
-            } else {
-              alert('No se puede acceder a la camara trasera del movil');
-            }
-          }).catch(function (e) {
-            console.error(e);
-          });
-        }
-        stopCamera()
-    </script>
   </body>
 </html>
