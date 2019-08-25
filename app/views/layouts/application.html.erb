@@ -30,7 +30,7 @@
           <%= header_menu_left %>
         </div>
         <div class="column has-text-centered">
-          <%= yield :header_title %>
+          <%= header_title %>
         </div>
         <div class="column has-text-right">
           <%= header_menu_right %>
@@ -51,7 +51,7 @@
       <div class="columns is-gapless is-mobile">
         <div class="column is-centered">
           <p class="has-background-light">
-            <%= link_to root_path, class: "link" do %>
+            <%= link_to root_path, class: "link #{yield :home_selected}" do %>
               <span class="icon is-large">
                 <i class="fas fa-3x fa-home"></i>
               </span>

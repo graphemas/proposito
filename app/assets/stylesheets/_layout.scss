@@ -16,5 +16,11 @@ footer {
   justify-content: center;
   align-items: center;
   color: #666;
+  &.selected {
+    color: #e1251b
+  }
 }
 
+.navbar img {
+  padding: 10px;
+}
