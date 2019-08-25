@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  get 'scanner/index'
   resources 'categories'
   resources 'products'
   get 'home/products'

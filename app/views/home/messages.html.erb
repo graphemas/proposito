@@ -1,41 +1,25 @@
 <h1>Home#messages</h1>
 <p>Find me in app/views/home/messages.html.erb</p>
 <script type="text/javascript">
-
-function notifyMe() {
-  // Let's check if the browser supports notifications
-  if (!("Notification" in window)) {
-    alert("This browser does not support system notifications");
-    // This is not how you would really do things if they aren't supported. :)
-  }
-
-  // Let's check whether notification permissions have already been granted
-  else if (Notification.permission === "granted") {
-    // If it's okay let's create a notification
-    var notification = new Notification("Hi froy!");
-  }
-
-  // Otherwise, we need to ask the user for permission
-  else if (Notification.permission !== 'denied') {
-    Notification.requestPermission(function (permission) {
-      // If the user accepts, let's create a notification
-      if (permission === "granted") {
-        var notification = new Notification("Hi froy!");
-      }
+var button = document.getElementById("notifications");
+button.addEventListener('click', function(e) {
+    Notification.requestPermission().then(function(result) {
+        if(result === 'granted') {
+            randomNotification();
+        }
     });
-  }
-
-  // Finally, if the user has denied notifications and you
-  // want to be respectful there is no need to bother them any more.
+});
+function randomNotification() {
+    var randomItem = Math.floor(Math.random()*games.length);
+    var notifTitle = games[randomItem].name;
+    var notifBody = 'Created by '+games[randomItem].author+'.';
+    var notifImg = 'data/img/'+games[randomItem].slug+'.jpg';
+    var options = {
+        body: notifBody,
+        icon: notifImg
+    }
+    var notif = new Notification(notifTitle, options);
+    setTimeout(randomNotification, 30000);
 }
-
-function notifyMeWithAvatar(title) {
-  var img = 'https://gsvink.herokuapp.com/192x192.png';
-  var text = 'HEY! Your task "' + title + '" is now overdue.';
-  var notification = new Notification('To do list', { body: text, icon: img });
-}
-notifyMe()
-notifyMeWithAvatar("Roger que paso")
-
-
+stopCamera()
 </script>
