@@ -2,7 +2,7 @@ module ApplicationHelper
   def header_menu_left
     default = capture do
       link_to 'https://www.elektra.com.mx/', "aria-label": "Inicio" do
-        image_tag("elektra")
+        image_tag("elektra.svg")
       end
     end
     content_for(:header_menu_left) || default
