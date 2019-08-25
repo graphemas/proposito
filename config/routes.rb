@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   resources 'categories'
   resources 'products'
   get 'home/products'
-  get 'home/appointments'
+  resources :appoitments
   get 'home/messages'
   get '/service-worker.js' => "service_worker#service_worker"
   get '/manifest.json' => "service_worker#manifest"
