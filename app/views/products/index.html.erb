@@ -1,2 +1,9 @@
 <h1>Productos</h1>
-<%= @products %>
+<% @products_list.each do |product| %>
+  <%= link_to '' do %>
+    <p>
+      <%= image_tag("192x192.png") %>
+      <%= product['Name'] %>
+    </p>
+  <% end %>
+<% end %>
