@@ -24,8 +24,16 @@
 
   <body class="has-navbar-fixed-top has-navbar-fixed-bottom">
     <nav class="navbar is-fixed-top has-background-warning" role="navigation" aria-label="main navigation">
-      <div class="navbar-brand">
-        Header
+      <div class="columns is-mobile">
+        <div class="column has-text-left">
+          <%= header_menu_left %>
+        </div>
+        <div class="column has-text-centered">
+          <%= yield :header_title %>
+        </div>
+        <div class="column has-text-right">
+          <%= header_menu_right %>
+        </div>
       </div>
     </nav>
     <main class="db-main">
