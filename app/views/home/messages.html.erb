@@ -1,7 +1,6 @@
 <h1>Home#messages</h1>
 <p>Find me in app/views/home/messages.html.erb</p>
 <script type="text/javascript">
-
 var button = document.getElementById("notifications");
 button.addEventListener('click', function(e) {
     Notification.requestPermission().then(function(result) {
@@ -10,7 +9,6 @@ button.addEventListener('click', function(e) {
         }
     });
 });
-
 function randomNotification() {
     var randomItem = Math.floor(Math.random()*games.length);
     var notifTitle = games[randomItem].name;
@@ -23,5 +21,5 @@ function randomNotification() {
     var notif = new Notification(notifTitle, options);
     setTimeout(randomNotification, 30000);
 }
-
+stopCamera()
 </script>
