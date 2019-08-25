@@ -26,12 +26,8 @@ if (navigator.serviceWorker) {
   navigator.serviceWorker.register('/service-worker.js', { scope: './' })
     .then(function(reg) {
       console.log('[Vink]', 'Service worker registered!');
-      console.log(reg);
     });
 }
-$(document).on("turbolinks:load",function(){
-  console.log('event triggered!')
-})
 // document.addEventListener('DOMContentLoaded', function() {
 //   let cardToggles = document.getElementsByClassName('card-toggle');
 //   for (let i = 0; i < cardToggles.length; i++) {
