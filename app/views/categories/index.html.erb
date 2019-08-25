@@ -12,21 +12,39 @@
       <ul class="menu-list">
         <% name['children'].each do |subname| %>
           <% if subname['children'].count > 0 %>
-            <li>
-              <a><%= subname['name']%></a>
-              <ul>
-                <% subname['children'].each do |minimalname| %>
-                  <li>
-                    <%= link_to products_path(category_id: minimalname['id']) do %>
-                      <%= minimalname['name']%>
-                    <% end %>
-                  </li>
-                <% end %>
-              </ul>
-            </li>
+            <div class="card is-fullwidth">
+        			<header class="card-header">
+        				<p class="card-header-title"><%= subname['name']%></p>
+        				<a class="card-header-icon card-toggle">
+        					<i class="fa fa-angle-down"></i>
+        				</a>
+        			</header>
+        			<div class="card-content is-hidden">
+        				<div class="content">
+                  <% subname['children'].each do |minimalname| %>
+                    <li>
+                      <%= link_to products_path(category_id: minimalname['id']) do %>
+                        <%= minimalname['name']%>
+                      <% end %>
+                    </li>
+                  <% end %>
+        				</div>
+        			</div>
+        		</div>
           <% end %>
         <% end %>
       </ul>
     <% end %>
   <% end %>
 </aside>
+
+<script type="text/javascript">
+  document.addEventListener('DOMContentLoaded', function() {
+  	let cardToggles = document.getElementsByClassName('card-toggle');
+  	for (let i = 0; i < cardToggles.length; i++) {
+  		cardToggles[i].addEventListener('click', e => {
+  			e.currentTarget.parentElement.parentElement.childNodes[3].classList.toggle('is-hidden');
+  		});
+  	}
+  });
+</script>
