@@ -14,6 +14,6 @@ class AppoitmentsController < ApplicationController
   end
   private
     def params_appoitment
-      params.require(:appoitment).permit(:subject, :description)
+      params.require(:appoitment).permit(:subject, :description, :store)
     end
 end
