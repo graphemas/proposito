@@ -5,6 +5,7 @@ Rails.application.routes.draw do
       get 'products_list(/c/:category_id)' => :products_list, as: :products_list
     end
   end
+  resources 'appoitments'
   get 'home/products'
   get 'home/appointments'
   get 'home/messages'
