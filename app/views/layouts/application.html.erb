@@ -20,9 +20,48 @@
     <%= action_cable_meta_tag %>
     <%= yield :stylesheets %>
     <link rel="manifest" href="/manifest.json">
+    <link href="//cdn.muicss.com/mui-0.9.43/css/mui.min.css" rel="stylesheet" type="text/css" />
+    <script src="//cdn.muicss.com/mui-0.9.43/js/mui.min.js"></script>
   </head>
 
   <body>
-    <%= yield %>
+    <header class="mui-appbar mui--z1">
+      <div class="mui-container">
+        <table>
+          <tr class="mui--appbar-height">
+            <td class="mui--text-title">Header</td>
+            <td align="mui--text-right">
+              <ul class="mui-list--inline mui--text-body2">
+                <li><a href="#">&nbsp;</a></li>
+                <li><a href="#">&nbsp;</a></li>
+                <li><a href="#">&nbsp;</a></li>
+              </ul>
+            </td>
+          </tr>
+        </table>
+      </div>
+    </header>
+    <div id="content-wrapper" class="mui--text-center">
+      <div class="mui--appbar-height"></div>
+      <br>
+      <br>
+      
+      <%= yield %>
+    </div>
+    <footer>
+        <div class="mui-appbar">
+          <table width="100%">
+            <tr style="vertical-align:middle;">
+              <td class="mui--appbar-height mui--text-center"><i class="fa fa-home" aria-hidden="true"></i>1</td>
+              <td class="mui--appbar-height mui--text-center"><i class="fa fa-home" aria-hidden="true"></i>2</td>
+              <td class="mui--appbar-height mui--text-center" align="right"><i class="fa fa-home" aria-hidden="true"></i>3</td>
+              <td class="mui--appbar-height mui--text-center" align="right"><i class="fa fa-home" aria-hidden="true"></i>4</td>
+
+            </tr>
+          </table>
+        </div>
+    </footer>
+
+
   </body>
 </html>

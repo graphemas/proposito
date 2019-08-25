@@ -8,6 +8,7 @@
     "@rails/ujs": "^6.0.0",
     "@rails/webpacker": "3.4",
     "local-time": "^2.1.0",
+    "muicss": "^0.9.43",
     "rails-erb-loader": "^5.5.2",
     "rails-ujs": "^5.2.3",
     "stimulus": "^1.1.1",

@@ -10,9 +10,11 @@
 require("@rails/ujs").start()
 require("turbolinks").start()
 require("@rails/activestorage").start()
+
 //require("channels")
 
 import "controllers"
+import 'materialize-css/dist/js/materialize'
 
 import LocalTime from "local-time"
 LocalTime.start()
