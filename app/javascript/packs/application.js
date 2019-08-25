@@ -28,4 +28,27 @@ if (navigator.serviceWorker) {
       console.log('[Vink]', 'Service worker registered!');
       console.log(reg);
     });
+
+  navigator.serviceWorker.ready.then((serviceWorkerRegistration) => {
+    serviceWorkerRegistration.pushManager
+    .subscribe({
+      userVisibleOnly: true,
+      applicationServerKey: window.vapidPublicKey
+    });
+  });
+} else {
+  console.error('Service worker is not supported in this browser');
 }
+
+$('.webpush-button').on('click', (e) => {
+  navigator.serviceWorker.ready
+  .then((serviceWorkerRegistration) => {
+    serviceWorkerRegistration.pushManager.getSubscription()
+    .then((subscription) => {
+      $.post('/push', {
+        subscription: subscription.toJSON(),
+        message: 'You clicked a button!'
+      });
+    });
+  });
+});
