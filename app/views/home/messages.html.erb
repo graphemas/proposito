@@ -25,12 +25,12 @@ function notifyMe() {
     });
   }
 
-  // Finally, if the user has denied notifications and you 
+  // Finally, if the user has denied notifications and you
   // want to be respectful there is no need to bother them any more.
 }
 
 function notifyMeWithAvatar(title) {
-  var img = 'https://gsvik.herokuapp.com/192x192.png';
+  var img = 'https://gsvink.herokuapp.com/192x192.png';
   var text = 'HEY! Your task "' + title + '" is now overdue.';
   var notification = new Notification('To do list', { body: text, icon: img });
 }
