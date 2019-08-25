@@ -9,4 +9,9 @@ class ProductsController < ApplicationController
             end
         end
     end
+  
+  def show
+    id= params[:id]
+    @product = gt_data("https://challenge.ektdevelopers.com/api/catalog_system/pvt/products/#{id}/specification")
+  end
 end

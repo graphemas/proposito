@@ -1,0 +1,11 @@
+<h1>Detalle de producto</h1>
+<% @product.each do |detail|  %>
+  <% detail.reverse_each do |key, value| %>
+      <% if value.is_a?(String) && value != '' %>
+        <%= value %>
+      <% else %>
+        <%= value[0] %>
+      <% end %>
+    <br>
+  <% end %>
+<% end %>
