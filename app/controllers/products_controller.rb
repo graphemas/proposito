@@ -2,7 +2,6 @@ class ProductsController < ApplicationController
     def index
         #https://elektra.vteximg.com.br/api/catalog_system/pub/products/GetProductAndSkuIds?categoryId=#{params['category_id']}&_from=1&_to=10
         #https://challenge.ektdevelopers.com/api/catalog_system/pvt/products/GetProductAndSkuIds?categoryId=#{params['category_id']}&_from=1&_to=10
-        https://elektra.vteximg.com.br/api/catalog_system/pub/products/GetProductAndSkuIds?categoryId=#{params['category_id']}&_from=1&_to=10
         @products = gt_data("https://www.elektra.com.mx/api/catalog_system/pub/products/GetProductAndSkuIds?categoryId=#{params['category_id']}&_from=1&_to=10")
         @products_list = []
         @products['data'].each do |product_id|
